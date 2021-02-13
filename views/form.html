@@ -1,0 +1,19 @@
+{{ template "layout" .}}
+
+{{ define "main" }}
+<section>
+    <form action="/process" method="POST">
+        <div>
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="message">Pesan Anda</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit">Kirim</button>
+        </div>
+    </form>
+</section>
+{{ end }}

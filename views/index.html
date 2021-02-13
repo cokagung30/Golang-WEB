@@ -1,0 +1,30 @@
+{{ template "layout" .}}
+
+{{ define "main" }}
+<section>
+    <table id="product">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .content }}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Price }}</td>
+                <td>{{ .Stock }}</td>
+                <td>
+                    {{ .StockStatus }}
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</section>
+{{ end }}
